@@ -1,0 +1,13 @@
+<h1> 여기는 게시판 지난 글 입니다. </h1>
+
+<% @every_post.each do |p| %>
+    제목 : <%= p.title %> <br>
+    내용 : <%= p.content %> <br>
+    보낸이 : <%= p.email %> <br>
+    시간 : <%= p.created_at %> 
+    <a href ="/update_view/<%=p.id%>"> [수정]</a>
+    <a href ="/destroy/<%=p.id%>"> [삭제]</a>
+    <hr>
+<%end%>
+
+<h1><a href="/"> 게시판 글쓰러가기 </a></h1>
